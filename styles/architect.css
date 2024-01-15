@@ -6,6 +6,11 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+/* 22 */
+.text-light-gray {
+    color: #727272;
+}
+
 /* 12 */
 .btn-primary {
     cursor: pointer;
@@ -21,6 +26,14 @@
     padding: 20px 24px;
 
 }
+
+/* 28 */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
+}
+
 
 /* header styles */
 header {
@@ -38,11 +51,7 @@ nav {
 }
 
 /* 6 */
-.nav-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #131313;
-}
+/* 28 = as this nav style has one more code, so it is better to put same style for same type of section */
 
 /* 3 */
 nav>ul {
@@ -79,9 +88,10 @@ nav li a {
 }
 
 /* 11 */
-.banner-description {
+/* .banner-description {
     color: #727272;
-}
+} */
+/* 21 = change the .banner-description to .text-light-gray as a shared style */
 
 /* 13 */
 .banner img {
@@ -90,35 +100,12 @@ nav li a {
 }
 
 
-/* responsive media query */
-/* 14 */
-/* mobile devices */
-@media screen and (max-width: 576px) {
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-}
-
-/* tablet or medium devices */
-@media screen and (min-width: 575px) and (max-width: 960px) {
-    header {
-        padding: 50px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-}
-
 /* main styles */
 /* 16 */
 main {
     max-width: 1440px;
-    margin: 0 auto;
+    /* 27 = adding margin top and bottom 70px */
+    margin: 70px auto;
 }
 
 /* teams styles */
@@ -144,10 +131,50 @@ main {
 }
 
 .teams-content .quick-list {
-    color: #727272;
     font-weight: 500;
 }
 
 .text-features {
     color: #FF900E;
+}
+
+
+/* responsive media query */
+/* 14 */
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+
+    /* 23 = .teams-container adding for using the same style such as "flex-direction: column" like nav for doing responsive in small devices*/
+    nav,
+    .teams-container {
+        flex-direction: column;
+
+    }
+
+    /* 24 */
+    .teams-img-container {
+        grid-template-columns: 1fr;
+        ;
+    }
+
+    /* 26 */
+    .teams-content {
+        padding: 0 20px;
+    }
+}
+
+/* tablet or medium devices */
+@media screen and (min-width: 575px) and (max-width: 960px) {
+    header {
+        padding: 50px;
+    }
+
+    /* 25 = .teams-container class applying same style like nav */
+    nav,
+    .teams-container {
+        flex-direction: column;
+    }
 }
